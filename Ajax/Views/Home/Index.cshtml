@@ -1,0 +1,56 @@
+﻿<div class="row jumbotron">
+    <div class="col-md-3">
+        <input type="text" id="first-name" placeholder="First Name" class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <input type="text" id="last-name" placeholder="Last Name" class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <input type="text" id="age" placeholder="Age" class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary btn-block" disabled  id="add-person">Add Person</button>
+    </div>
+</div>
+<div class="row">
+    <table id="people-table" class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Edit </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="id" id="id" />
+                <input type="text" id="edit-first-name" name="first-name" placeholder="First Name" class="form-control" />
+                <input type="text" id="edit-last-name" name="last-name" placeholder="Last Name" class="form-control mt-3" />
+                <input type="text" id="edit-age" name="age" placeholder="Age" class="form-control mt-3" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="/js/JavaScript.js"></script>
+}
